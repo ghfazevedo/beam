@@ -7,11 +7,11 @@ It creates valid `<distribution>` blocks using `MRCAPrior`, optionally inserts t
 
 BEAMX removes the need for manual MRCA specification in BEAUti and guarantees consistency between tree topology, priors, and loggers.
 
-[!NOTE] It does not create a age prior distribution, but it can be added opening the XML file in BEUTI or manually edditing the XML 
+[NOTE] It does not create a age prior distribution, but it can be added opening the XML file in BEUTI or manually edditing the XML 
 
 ---
 
-## 🚀 Features
+## Features
 
 * Automatically derives **all internal clades** from a Newick tree
 * Generates BEAST-compatible **`MRCAPrior`** XML blocks
@@ -25,7 +25,7 @@ BEAMX removes the need for manual MRCA specification in BEAUti and guarantees co
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 git clone https://github.com/ghfazevedo/beam
@@ -40,7 +40,7 @@ pip install .
 * `ete3`
 
 
-### 🧠 Notes specific to BEAST users
+### Notes specific to BEAST users
 
 - BEAM **does not depend on BEAST being installed**
 - It only generates/modifies XML
@@ -49,7 +49,7 @@ pip install .
 
 ---
 
-## 🧠 Concept
+## Concept
 
 In BEAST, monophyly constraints are enforced using **MRCA priors**.
 Given a rooted Newick tree, BEAMX:
@@ -63,7 +63,7 @@ This ensures **topological consistency** between the supplied tree and the BEAST
 
 ---
 
-## 🔧 Usage
+## Usage
 
 ```bash
 beamx -t TREE.nwk -spec SPEC -tn TREE_NAME [-xml analysis.xml]
@@ -85,7 +85,7 @@ beamx -t TREE.nwk -spec SPEC -tn TREE_NAME [-xml analysis.xml]
 
 ---
 
-## 🧪 Example
+## Example
 
 ### Input tree (`tree.nwk`)
 
@@ -105,11 +105,11 @@ beamx \
 
 ---
 
-## 🧾 Behavior with `-xml`
+## Behavior with `-xml`
 
 If an XML file is provided, BEAMX will:
 
-### 1️⃣ Append MRCA priors to
+### 1️⃣Append MRCA priors to
 
 ```xml
 <distribution id="prior" spec="util.CompoundDistribution">
@@ -142,7 +142,7 @@ All changes preserve existing XML structure and ordering.
 
 ---
 
-## 🧾 Behavior without `-xml`
+## Behavior without `-xml`
 
 If no XML file is provided, BEAMX writes **`taxonset.xml`**, containing **commented insertion blocks**:
 
@@ -164,11 +164,11 @@ If no XML file is provided, BEAMX writes **`taxonset.xml`**, containing **commen
 This allows safe manual integration into BEAUti-generated XML files.
 
 
-[!NOTE] It does not create a age prior distribution, but it can be added opening the XML file in BEUTI or manually edditing the XML 
+[NOTE] It does not create a age prior distribution, but it can be added opening the XML file in BEUTI or manually edditing the XML 
 
 ---
 
-## 🏷 Naming Convention
+## Naming Convention
 
 | Constraint              | Description                    |
 | ----------------------- | ------------------------------ |
@@ -183,25 +183,21 @@ Each prior is logged using:
 
 ---
 
-## 📚 Recommended Citation (example)
+## Recommended Citation (example)
 
-> Monophyly constraints were generated automatically using **BEAM** (https://github.com/ghfazevedo/beam), a BEAST XML utility that derives MRCA priors directly from Newick trees.
+> Monophyly constraints were generated automatically using **BEAM** (https://github.com/ghfazevedo/beam) based on the [your tree used for constraints here], a BEAST XML utility that derives MRCA priors directly from Newick trees.
 
 (You may adapt this wording to your Methods section.)
 
 ---
 
-## 🛠 License
+## License
 
 MIT License (or specify your preferred license)
 
 ---
 
-## 👤 Author
 
-Guilherme Azevedo
-
-
-## Disclaimer
+### Disclaimer
 
 Code and README file created with AI assitance based on a pseudocode.
