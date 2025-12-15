@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beam"
+version = "0.1.0"
+description = "BEAST Automated Monophyletic XML constraints from Newick trees"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+authors = [
+  {name = "Guilherme Azevedo"}
+]
+
+dependencies = [
+  "ete3"
+]
+
+[project.urls]
+Homepage = "https://github.com/ghfazevedo/beam"
+Repository = "https://github.com/ghfazevedo/beam"
+
+[project.scripts]
+beam = "beam.beam:main"

@@ -1,3 +1,17 @@
+Metadata-Version: 2.4
+Name: beam
+Version: 0.1.0
+Summary: BEAST Automated Monophyletic XML constraints from Newick trees
+Author: Guilherme Azevedo
+License: MIT
+Project-URL: Homepage, https://github.com/ghfazevedo/beam
+Project-URL: Repository, https://github.com/ghfazevedo/beam
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ete3
+Dynamic: license-file
+
 # **BEAM**
 
 ### **Beast Automated Monophyletic constraints from Newick trees**

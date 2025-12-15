@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+beam/__init__.py
+beam/beam.py
+beam.egg-info/PKG-INFO
+beam.egg-info/SOURCES.txt
+beam.egg-info/dependency_links.txt
+beam.egg-info/entry_points.txt
+beam.egg-info/requires.txt
+beam.egg-info/top_level.txt
