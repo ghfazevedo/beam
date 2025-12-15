@@ -72,9 +72,9 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate BEAST MRCA taxonset priors from a Newick tree."
     )
-    parser.add_argument("-t", "--tree", required=True)
-    parser.add_argument("-spec", required=True)
-    parser.add_argument("-tn", "--treename", required=True)
+    parser.add_argument("-t", "--tree", required=True, help="Input Newick tree file")
+    parser.add_argument("-spec", default="beast.math.distributions.MRCAPrior", help="BEAST prior specification (default: beast.math.distributions.MRCAPrior). It may change according to version and model used. This is for species tree in Starbeast3")
+    parser.add_argument("-tn", "--treename", default="Tree.t:Species", help="Tree ID reference in BEAST XML (default: Tree.t:Species). It may change according to version and model used. This is for species tree in Starbeast3")
     parser.add_argument("-xml", "--xmlfile", help="Existing BEAST XML to modify")
     args = parser.parse_args()
 
