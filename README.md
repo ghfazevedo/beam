@@ -185,21 +185,9 @@ Each prior is logged using:
 
 ## 📚 Recommended Citation (example)
 
-> Monophyly constraints were generated automatically using **BEAMX**, a BEAST XML utility that derives MRCA priors directly from Newick trees.
+> Monophyly constraints were generated automatically using **BEAM** (https://github.com/ghfazevedo/beam), a BEAST XML utility that derives MRCA priors directly from Newick trees.
 
 (You may adapt this wording to your Methods section.)
-
----
-
-## 🧩 Future Extensions
-
-BEAMX is designed to be extensible. Possible future features include:
-
-* Optional `monophyletic="true"` flags
-* Selective clade exclusion
-* Height-bounded MRCA priors
-* YAML/JSON constraint configuration
-* BEAUti plugin integration
 
 ---
 
