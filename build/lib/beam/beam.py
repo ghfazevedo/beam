@@ -53,6 +53,24 @@ def build_mrca_blocks(tree, spec, treename):
         blocks.append(dist)
 
     return blocks, log_ids
+    
+def label_internal_nodes(tree):
+    """
+    Label internal nodes with MRCA IDs matching build_mrca_blocks().
+    Modifies the tree in place.
+    """
+    counter = 1
+
+    for node in tree.traverse():
+        if node.is_leaf():
+            continue
+
+        if node.is_root():
+            node.name = "root"
+        else:
+            node.name = f"mrca_{counter:02d}"
+            counter += 1
+
 
 # ---------------------------
 # XML insertion helpers
@@ -79,6 +97,12 @@ def main():
     args = parser.parse_args()
 
     tree = Tree(args.tree, format=1)
+    
+    # Label internal nodes and write annotated Newick
+    label_internal_nodes(tree)
+    tree_out = args.tree.rsplit(".", 1)[0] + "_nodenames.nwck"
+    tree.write(outfile=tree_out, format=1)
+    
     mrca_blocks, log_ids = build_mrca_blocks(tree, args.spec, args.treename)
 
     # ------------------------------------------------------------
