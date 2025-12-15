@@ -74,8 +74,8 @@ beamx -t TREE.nwk -spec SPEC -tn TREE_NAME [-xml analysis.xml]
 | Flag    | Description                                                           |
 | ------- | --------------------------------------------------------------------- |
 | `-t`    | Input Newick tree                                                     |
-| `-spec` | BEAST prior specification (e.g. `beast.math.distributions.MRCAPrior`) |
-| `-tn`   | Tree reference name used in the BEAST XML (e.g. `Tree.t:Species`)     |
+| `-spec` | BEAST prior specification (default: `beast.math.distributions.MRCAPrior`). It may change according to version and model used. This is for species tree in Starbeast3 |
+| `-tn`   | Tree ID reference in BEAST XML (default: `Tree.t:Species`). It may change according to version and model used. This is for species tree in Starbeast3    |
 
 ### Optional arguments
 
